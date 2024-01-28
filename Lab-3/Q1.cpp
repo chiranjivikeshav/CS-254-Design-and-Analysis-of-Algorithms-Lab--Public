@@ -83,14 +83,14 @@ int main(){
     cout<<"ENTER THE SIZE OF MATRIX"<<endl;
     int n;
     cin>>n;
-    cout<<"ENTER THE ELEMENTS OF MATRIX"<<endl;
+    cout<<"ENTER THE ELEMENTS OF FIRST MATRIX"<<endl;
     vector<vector<long long>> A(n, vector<long long>(n)), B(n, vector<long long>(n));
     for (int i = 0; i < n; ++i){
         for (int j = 0; j < n; ++j){
             cin>>A[i][j];
         }
     }
-
+    cout<<"ENTER THE ELEMENTS OF SECOND MATRIX"<<endl;
     for (int i = 0; i < n; ++i){
         for (int j = 0; j < n; ++j){
             cin>>B[i][j];
