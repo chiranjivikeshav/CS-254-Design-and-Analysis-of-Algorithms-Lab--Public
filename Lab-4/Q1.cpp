@@ -54,7 +54,7 @@ void merge_Sort(int l,int r,long int a[],int &count_inversion){
 }
 
 int main(){   
-    freopen("input1.txt", "r", stdin);
+    // freopen("input1.txt", "r", stdin);
     
     cout<<"ENTER SIZE OF ARRAY"<<endl;
     int n;
