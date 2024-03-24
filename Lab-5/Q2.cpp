@@ -32,23 +32,17 @@ int main(){
     while (q.size() != 0){
         int x = q.front().first;
         int y = q.front().second;
-        if (x == n)
-        {
+        if (x == n){
             ans = min(ans, y);
         }
         q.pop();
-        for (int i = 1; i < 6; i++)
-        {
-            if (x + i <= n)
-            {
-                if (vis[x + i] == 0)
-                {
+        for (int i = 1; i < 6; i++){
+            if (x + i <= n){
+                if (vis[x + i] == 0){
                     vis[x + i] = 1;
-                    if (pa[x + i] != 0)
-                    {
+                    if (pa[x + i] != 0){
                         int k = pa[x + i];
-                        if (vis[k] == 0)
-                        {
+                        if (vis[k] == 0){
                             vis[k] = 1;
                             q.push({k, y + 1});
                         }

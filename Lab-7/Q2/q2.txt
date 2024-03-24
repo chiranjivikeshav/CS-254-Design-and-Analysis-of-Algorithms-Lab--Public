@@ -1,0 +1,34 @@
+Greedy Approach :
+we store each job as a hashmap . we put deadline as a key
+and priority_queue as a pair to store all profit 
+corresponding to that deadline and also get max profit in O(1)
+time. 
+Now we start iteration each time slot form 1 to max(Deadline).
+For each time slot we check for job such that there deadline is 
+greater than or equal to that time slot .If we able to find out
+ any job then we just add maximum profit from that job into my
+answer after that we pop out that profit (job) from that deadline, 
+if after that no job found corresponding to that deadline then 
+we also erase that deadline from our hashmap.
+
+
+This Approach not give always optimal solution
+See this case :
+========================
+Number of Job : 6
+Deadline :1 1 4 4 4 4
+Profit: 20 30 90 70 50 40
+========================
+
+this algorithm choose job for each time slot as
+following :
+    1  2  3  4 
+    30 90 70 50
+
+    Total profit = 240
+optimal sol:
+    1  2  3  4
+    90 70 50 40
+
+    Total profit = 250
+
